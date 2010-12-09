@@ -1,0 +1,19 @@
+--- apertium-eo-es-1.0.0/Makefile.am.orig	2009-11-18 19:58:26.000000000 +0100
++++ apertium-eo-es-1.0.0/Makefile.am	2010-12-09 19:27:56.978114393 +0100
+@@ -121,11 +121,11 @@
+ 
+ install-data-local:
+ 	apertium-gen-modes modes.xml apertium-$(PREFIX1)
+-	$(INSTALL_DATA) $(PREFIX1).mode $(apertium_eo_esmodesdir)
+-	$(INSTALL_DATA) $(PREFIX2).mode $(apertium_eo_esmodesdir)
+-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(apertium_eo_esdir)
+-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(BASENAME).$(PREFIX1).t1x.translit $(apertium_eo_esdir)
+-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t2x.translit $(BASENAME).$(PREFIX1).t3x.translit $(apertium_eo_esdir)
++	$(INSTALL_DATA) $(PREFIX1).mode $(DESTDIR)$(apertium_eo_esmodesdir)
++	$(INSTALL_DATA) $(PREFIX2).mode $(DESTDIR)$(apertium_eo_esmodesdir)
++	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(DESTDIR)$(apertium_eo_esdir)
++	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(BASENAME).$(PREFIX1).t1x.translit $(DESTDIR)$(apertium_eo_esdir)
++	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t2x.translit $(BASENAME).$(PREFIX1).t3x.translit $(DESTDIR)$(apertium_eo_esdir)
+ 
+ 
+ CLEANFILES = -rf $(TARGETS) *.translit modes 
